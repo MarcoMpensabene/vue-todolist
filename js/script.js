@@ -1,10 +1,12 @@
 const { createApp } = Vue
 createApp({
-    data() {
+    data() 
+    {
         return {
         indexList : 0 ,
         clearContent : "" ,
-        todoList : [
+        todoList : 
+        [
             {
                 "text" : "Lavare i vestiti" ,
                 done : false
@@ -28,7 +30,8 @@ createApp({
         ]
     }
     } ,
-    methods: {
+    methods: 
+    {
         // ! INVERTIAMO IL VALORE DI done
         invertDone(indexList) {
             this.todoList[indexList].done = !this.todoList[indexList].done;
@@ -36,20 +39,23 @@ createApp({
         removeText(indexList){
             this.todoList.splice(indexList , 1);
         },
+        // ? CREIAMO STRUTTURA DELL'OGGETTO PER POI INSERIRLO ALL'INTERNO DELL'ARRAY
         addNewEl(content){
             const newEl = {
                 "text" : content ,
                 done : false
             }
-            this.todoList.push(newEl)
-            this.clearInpEl()
+            this.todoList.push(newEl);
+            this.clearInpEl();
         },
+        // *   SVUOTIAMO IL CONTENUTO DOPO AVER AGGIUNTO UN ELEMENTO
         clearInpEl(){
             this.clearContent= " ";
         },
+        // > MODIFICHIAMO IL VALORE DI TEXT TRAMITE UN PROMPT
         modEl(indexList){
-            this.todoList[indexList].text = prompt("Modifica la task")
+            this.todoList[indexList].text = prompt("Modifica la task");
         }
         
     },
-}).mount('#app')
+}).mount('#app');
