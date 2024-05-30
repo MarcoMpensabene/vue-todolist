@@ -16,20 +16,21 @@
         <header>
             <h1>JS ToDoList</h1>
         </header>
-        
-        <div class="list-container">
-            <ul class="todo-list">
-                <li v-for="(item , index)  in todoList">
-                <span :class="(item.done === true) ? 'done' : '' " @click="invertDone(index)">{{item.text}}</span>
-                <i class="fa-regular fa-square-minus" @click="removeText(index)"></i>
-                </li>
-            </ul>
-        </div>
-        <section class="listInput">
-            <label for="new-list-El">Type task</label>
-            <input type="text"  id="new-list-El" v-model="newText" @keyup.enter="addNewEl(newText)">
-            <i class="fa-solid fa-plus" @click="addNewEl(newText)"></i>
-        </section>
+        <main>
+            <div class="list-container">
+                <ul class="todo-list">
+                    <li v-for="(item , index)  in todoList">
+                    <span :class="(item.done === true) ? 'done' : '' " @click="invertDone(index)">{{item.text}}</span>
+                    <i class="fa-regular fa-square-minus" @click="removeText(index)"></i>
+                    </li>
+                </ul>
+            </div>
+            <section class="listInput">
+                <label for="new-list-El">Type task</label>
+                <input type="text"  id="new-list-El" v-model="newText" @keyup.enter="addNewEl(newText)">
+                <i class="fa-solid fa-plus" @click="addNewEl(newText)"></i>
+            </section>
+        </main>
     </div>
     
     <!-- JS -->

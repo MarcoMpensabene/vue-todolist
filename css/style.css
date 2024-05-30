@@ -12,7 +12,16 @@ div.app{
 header{
     background-color: aquamarine;
 }
-
+header h1{
+    color: brown;
+}
+main{
+    background-color: fuchsia;
+    height: 100vh;
+}
+i{
+    color: blue;
+}
 ul.todo-list{
     padding: 2rem;
     list-style: none;
@@ -41,4 +50,15 @@ section.listInput{
 
 div.list-container{
     margin-bottom: 2rem;
+}
+
+section.listInput{
+    font-size: 20px;
+}
+section.listInput i{
+    margin-left: 2rem;
+}
+section.listInput label{
+    margin-right: 2rem;
+    color: yellow;
 }
