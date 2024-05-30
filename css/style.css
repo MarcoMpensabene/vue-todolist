@@ -21,6 +21,7 @@ main{
 }
 i{
     color: blue;
+    margin-right: .5rem;
 }
 ul.todo-list{
     padding: 2rem;

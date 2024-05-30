@@ -22,6 +22,7 @@
                     <li v-for="(item , index)  in todoList">
                     <span :class="(item.done === true) ? 'done' : '' " @click="invertDone(index)">{{item.text}}</span>
                     <i class="fa-regular fa-square-minus" @click="removeText(index)"></i>
+                    <i class="fa-solid fa-rotate" @click="modEl(index)"></i>
                     </li>
                 </ul>
             </div>

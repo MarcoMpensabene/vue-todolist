@@ -46,6 +46,9 @@ createApp({
         },
         clearInpEl(){
             this.clearContent= " ";
+        },
+        modEl(indexList){
+            this.todoList[indexList].text = prompt("Modifica la task")
         }
         
     },
