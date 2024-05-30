@@ -3,7 +3,7 @@ createApp({
     data() {
         return {
         indexList : 0 ,
-        newText : "" ,
+        clearContent : "" ,
         todoList : [
             {
                 "text" : "Lavare i vestiti" ,
@@ -36,13 +36,17 @@ createApp({
         removeText(indexList){
             this.todoList.splice(indexList , 1);
         },
-        addNewEl(newText){
+        addNewEl(content){
             const newEl = {
-                "text" : newText ,
+                "text" : content ,
                 done : false
             }
-
             this.todoList.push(newEl)
+            this.clearInpEl()
+        },
+        clearInpEl(){
+            this.clearContent= " ";
         }
+        
     },
 }).mount('#app')
