@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+div.app{
+    width: 1000px;
+}
+header{
+    text-align: center;
+    background-color: aquamarine;
+}
+
+ul.todo-list{
+    padding: 1.2rem;
+    list-style: none;
+}
+
+
+.done{
+    text-decoration: line-through;
+}
+
