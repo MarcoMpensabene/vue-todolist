@@ -27,7 +27,7 @@
         </div>
         <section class="listInput">
             <label for="new-list-El">Type task</label>
-            <input type="text"  id="new-list-El" v-model="newText">
+            <input type="text"  id="new-list-El" v-model="newText" @keyup.enter="addNewEl(newText)">
             <i class="fa-solid fa-plus" @click="addNewEl(newText)"></i>
         </section>
     </div>
