@@ -14,10 +14,22 @@ header{
 ul.todo-list{
     padding: 1.2rem;
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+ul.todo-list li span{
+    margin-right: 2rem;
 }
 
+div.list-container{
+    text-align: center;
+}
 
 .done{
     text-decoration: line-through;
 }
 
+section.list-input{
+    margin: 0 auto;
+}

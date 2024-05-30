@@ -6,6 +6,8 @@
     <title>Document</title>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- FontAW-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- JS-Vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
@@ -19,14 +21,14 @@
             <ul class="todo-list">
                 <li v-for="(item , index)  in todoList">
                 <span :class="(item.done === true) ? 'done' : '' " @click="invertDone(index)">{{item.text}}</span>
-                <i @click="removeText(index)">PREMI</i>
+                <i class="fa-regular fa-square-minus" @click="removeText(index)"></i>
                 </li>
             </ul>
         </div>
         <section class="listInput">
-            <label for="new-list-El">Type something to do</label>
+            <label for="new-list-El">Type task</label>
             <input type="text"  id="new-list-El" v-model="newText">
-            <button  @click="addNewEl(newText)">Add to list</button>
+            <i class="fa-solid fa-plus" @click="addNewEl(newText)"></i>
         </section>
     </div>
     
